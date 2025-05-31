@@ -1,0 +1,3 @@
+﻿Email,Name,RepoUrl,DeployedUrl
+john.doe@example.com,Jhon Doe,https://github.com/johndoe/project,https://deployedurl.com/project
+jane.doe@example.com,Jhon Doe,https://github.com/janedoe/project,https://deployedurl.com/project

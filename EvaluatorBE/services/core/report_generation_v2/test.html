@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Execution Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .summary {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .summary div {
+            background: #e7e7e7;
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+        .summary div:first-child {
+            margin-left: 0;
+        }
+        .summary div:last-child {
+            margin-right: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .success {
+            color: green;
+        }
+        .fail {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Backend Test Execution Report</h1>
+        <div class="summary">
+            <div>
+                <h2>Total Test Cases</h2>
+                <p>11</p>
+            </div>
+            <div>
+                <h2>Passed Test Cases</h2>
+                <p class="success">10</p>
+            </div>
+            <div>
+                <h2>Failed Test Cases</h2>
+                <p class="fail">1</p>
+            </div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Request URL</th>
+                    <th>Request Method</th>
+                    <th>Response Status</th>
+                    <th>Remarks</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/login/token</td>
+                    <td>POST</td>
+                    <td>200</td>
+                    <td class="success">success</td>
+                </tr>
+                <tr>
+                    <td>/product/</td>
+                    <td>POST</td>
+                    <td>200</td>
+                    <td class="success">success</td>
+                </tr>
+                <tr>
+                    <td>/product/</td>
+                    <td>GET</td>
+                    <td>200</td>
+                    <td class="success">success</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

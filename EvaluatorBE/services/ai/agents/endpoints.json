@@ -1,0 +1,98 @@
+[
+    {
+        "endpoint_description": "Create a new product.",
+        "endpoint_url": "/product/",
+        "endpoint_method": "POST",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": "{\"name\": \"Sample Product\", \"description\": \"Sample Description\", \"price\": 100, \"stock_quantity\": 10, \"category_id\": 1}"
+    },
+    {
+        "endpoint_description": "Retrieve all products or a specific product by ID.",
+        "endpoint_url": "/product/{id}",
+        "endpoint_method": "GET",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "Retrieve all products or a specific product by ID.",
+        "endpoint_url": "/product/",
+        "endpoint_method": "GET",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "Update a product's details and stock quantity.",
+        "endpoint_url": "/product/{id}",
+        "endpoint_method": "PUT",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": "{\"name\": \"Updated Product\", \"description\": \"Updated Description\", \"price\": 120, \"stock_quantity\": 15, \"category_id\": 2}"
+    },
+    {
+        "endpoint_description": "Delete a product.",
+        "endpoint_url": "/product/{id}",
+        "endpoint_method": "DELETE",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "Add new categories.",
+        "endpoint_url": "/category/",
+        "endpoint_method": "POST",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": "{\"name\": \"New Category\", \"description\": \"Category Description\"}"
+    },
+    {
+        "endpoint_description": "Retrieve a list of categories or a specific category.",
+        "endpoint_url": "/category/{id}",
+        "endpoint_method": "GET",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "Retrieve a list of categories or a specific category.",
+        "endpoint_url": "/category/",
+        "endpoint_method": "GET",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "Update categories.",
+        "endpoint_url": "/category/{id}",
+        "endpoint_method": "PUT",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": "{\"name\": \"Updated Category\", \"description\": \"Updated Description\"}"
+    },
+    {
+        "endpoint_description": "Delete categories.",
+        "endpoint_url": "/category/{id}",
+        "endpoint_method": "DELETE",
+        "is_authentication_required": true,
+        "is_implemented": true,
+        "request_body_example": null
+    },
+    {
+        "endpoint_description": "User registration.",
+        "endpoint_url": "/user/",
+        "endpoint_method": "POST",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": "{\"username\": \"newuser\", \"password\": \"password123\"}"
+    },
+    {
+        "endpoint_description": "User login and token generation.",
+        "endpoint_url": "/login/token",
+        "endpoint_method": "POST",
+        "is_authentication_required": false,
+        "is_implemented": true,
+        "request_body_example": "{\"username\": \"existinguser\", \"password\": \"password123\"}"
+    }
+]

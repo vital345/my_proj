@@ -1,0 +1,8 @@
+export const SETTINGS = {
+  BE_WEB_SOCKET_URL: import.meta.env.VITE_BACKEND_WEB_SOCKET,
+  GEMINI_API_KEY: import.meta.env.VITE_GEMINI_API_KEY,
+  GEMINI_HOME_URL: import.meta.env.VITE_GEMINI_HOME_URL,
+  GEMINI_VOICE_MODEL: import.meta.env.VITE_GEMINI_VOICE_MODEL,
+  GEMINI_MODEL: import.meta.env.VITE_GEMINI_MODEL,
+  THRESHOLD_TIME: parseInt(import.meta.env.VITE_THRESHOLD_TIME),
+};

@@ -1,0 +1,41 @@
+# Python cache files
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+
+# Distribution/build directories
+build/
+dist/
+*.egg-info/
+
+# Virtual environment directories (adjust if you name them differently)
+venv/
+.env/
+ENV/
+.venv/
+
+# Test and coverage outputs
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Log files
+logs/
+
+# Environment variables (be cautious: if you want to keep them in the container, remove this line)
+.env
+env.sh
+
+# OS-specific files
+.DS_Store
+
+# IDE/editor configuration files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+Pipfile
+Pipfile.lock
+cloned_repo

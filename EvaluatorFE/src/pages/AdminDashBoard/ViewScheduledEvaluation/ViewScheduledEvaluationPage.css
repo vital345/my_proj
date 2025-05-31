@@ -1,0 +1,16 @@
+.retrigger-modal {
+  .MuiBox-root {
+    width: 800px;
+
+    .submit-button {
+      display: flex;
+      margin-left: auto;
+    }
+  }
+}
+
+main {
+  overflow: hidden;
+  height: 100%;
+  max-height: 100%;
+}

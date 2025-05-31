@@ -1,0 +1,182 @@
+pre {
+  background: transparent !important;
+  font-size: 1.125rem;
+  max-height: 25rem;
+  overflow: auto;
+  word-break: break-word; /* For older browsers */
+  word-break: break-all; /* Forces break anywhere */
+  overflow-wrap: break-word; /* Standard approach */
+
+  span {
+    display: inline !important;
+  }
+}
+
+main {
+  max-height: 100vh;
+  height: 100vh;
+}
+
+#root {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.timer-container {
+  padding: 1.25rem;
+  font-size: 1.875rem;
+  margin-bottom: 1.25rem;
+  width: fit-content;
+  margin-top: 1.25rem;
+  align-self: flex-end;
+  font-family: "Roboto Mono", serif;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+
+.viva-page-container {
+  max-height: 100vh;
+  height: 100vh;
+  background: radial-gradient(ellipse at bottom, #1c2837 0%, #050608 100%);
+  background-attachment: fixed;
+  color: #ffffff;
+
+  span,
+  p,
+  div {
+    color: #ffffff;
+  }
+}
+
+.linenumber {
+  color: #ffffff;
+}
+
+.orb-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  height: 100%;
+  justify-items: center;
+}
+
+.camera-container {
+  height: 17.5rem;
+  width: 25.6875rem;
+  border-radius: 1.3125rem;
+  margin: 0rem 1.25rem;
+  margin-bottom: 1.875rem;
+  align-self: center;
+  overflow: hidden;
+}
+
+.right-panel-conatiner {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1.25rem;
+  flex: 1;
+}
+
+.question-text {
+  font-family: "Mulish", serif;
+  font-size: 1.375rem;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  max-height: 12.5rem;
+  overflow-y: auto;
+}
+
+.controls-container {
+  padding: 1.25rem;
+  width: fit-content;
+  min-width: 12.5rem;
+  justify-self: center;
+  margin: auto auto 0.625rem auto;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-left: 0.625rem;
+  }
+}
+
+.action-button {
+  color: #ffffff;
+  background-color: rgba(70, 130, 180, 0.8);
+}
+
+.mic-button::before {
+  background-color: rgba(70, 130, 180, 0.8);
+}
+
+.mic-button:hover {
+  background-color: rgba(70, 130, 180, 0.8);
+}
+
+@media screen and (max-width: 800px) {
+  .timer-container {
+    font-size: 26px;
+  }
+
+  .question-text {
+    font-size: 18px;
+    max-height: 150px;
+  }
+
+  pre {
+    font-size: 16px;
+    max-height: 200px;
+  }
+}
+
+@media (min-resolution: 150dpi) {
+  .timer-container {
+    font-size: 20px;
+  }
+
+  .question-text {
+    font-size: 16px;
+    max-height: 120px;
+  }
+
+  pre {
+    font-size: 14px;
+    max-height: 150px;
+  }
+
+  .camera-container {
+    width: 13.4375rem;
+    height: 10.9375rem;
+  }
+
+  .controls-container {
+    padding: 0.875rem;
+    margin-bottom: 1.875rem;
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
+@media (min-resolution: 120dpi) {
+  .timer-container {
+    font-size: 26px;
+  }
+
+  .question-text {
+    font-size: 18px;
+    max-height: 150px;
+  }
+
+  pre {
+    font-size: 16px;
+    max-height: 200px;
+  }
+}

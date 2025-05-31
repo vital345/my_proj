@@ -1,0 +1,115 @@
+[
+    {
+        "instructions": [
+            "Navigate to '/signup'.",
+            "Find the Email input field using the CSS selector 'input[placeholder=\"Email Id\"]'.",
+            "Type 'John@gmail.com' into the Email input field.",
+            "Find the Password input field using the CSS selector 'input[placeholder=\"Password\"]'.",
+            "Type 'm38rmF$' into the Password input field.",
+            "Find the Username input field using the CSS selector 'input[placeholder=\"Username\"]'.",
+            "Type 'johnd' into the Username input field.",
+            "Click the 'Next' button using the CSS selector 'button:contains(\"Next\")'.",
+            "Find the First Name input field using the CSS selector 'input[placeholder=\"First Name\"]'.",
+            "Type 'John' into the First Name input field.",
+            "Find the Last Name input field using the CSS selector 'input[placeholder=\"Last Name\"]'.",
+            "Type 'Doe' into the Last Name input field.",
+            "Find the Phone Number input field using the CSS selector 'input[placeholder=\"Phone Number\"]'.",
+            "Type '15702367033' into the Phone Number input field.",
+            "Find the Address input field using the CSS selector 'input[placeholder=\"Address\"]'.",
+            "Type '7835 new road, kilcoole' into the Address input field.",
+            "Click the 'Sign Up' button using the CSS selector 'button:contains(\"Sign Up\")'.",
+            "Verify successful sign-up and redirection to the login screen."
+        ]
+    },
+    {
+        "instructions": [
+            "Navigate to '/login'.",
+            "Find the Username input field using the CSS selector 'input[placeholder=\"Username\"]'.",
+            "Type 'vipinkumar6@deloitte.com' into the Username input field.",
+            "Find the Password input field using the CSS selector 'input[placeholder=\"Password\"]'.",
+            "Type '123' into the Password input field.",
+            "Click the login button using the CSS selector 'button:contains(\"Login\")'.",
+            "Verify successful login and redirection to '/'.",
+            "Verify that a token is stored in local storage."
+        ]
+    },
+    {
+        "instructions": [
+            "Log in as a user:",
+            "Navigate to '/login'.",
+            "Find the Username input field using the CSS selector 'input[placeholder=\"Username\"]'.",
+            "Type 'johnd' into the Username input field.",
+            "Find the Password input field using the CSS selector 'input[placeholder=\"Password\"]'.",
+            "Type 'm38rmF$' into the Password input field.",
+            "Click the login button.",
+            "Verify successful login and redirection to '/event-list'.",
+            "Navigate to '/event-list'.",
+            "Find the search input field using the CSS selector 'input[placeholder=\"Search events...\"]'.",
+            "Type 'Conference' into the search input field.",
+            "Verify that the events list is filtered to show only 'Conference' events."
+        ]
+    },
+    {
+        "instructions": [
+            "Log in as a user:",
+            "Navigate to '/login'.",
+            "Find the Username input field using the CSS selector 'input[placeholder=\"Username\"]'.",
+            "Type 'johnd' into the Username input field.",
+            "Find the Password input field using the CSS selector 'input[placeholder=\"Password\"]'.",
+            "Type 'm38rmF$' into the Password input field.",
+            "Click the login button.",
+            "Verify successful login and redirection to '/event-list'.",
+            "Navigate to '/event-details/1'.",
+            "Verify that the event details are displayed correctly.",
+            "Click the 'Register' button using the CSS selector 'button:contains(\"REGISTER\")'.",
+            "Verify that the button text changes to 'REGISTERED' and no further action is possible."
+        ]
+    },
+    {
+        "instructions": [
+            "Log in as a user:",
+            "Navigate to '/login'.",
+            "Find the Username input field using the CSS selector 'input[placeholder=\"Username\"]'.",
+            "Type 'johnd' into the Username input field.",
+            "Find the Password input field using the CSS selector 'input[placeholder=\"Password\"]'.",
+            "Type 'm38rmF$' into the Password input field.",
+            "Click the login button.",
+            "Verify successful login and redirection to '/event-list'.",
+            "Navigate to '/create-event'.",
+            "Find the Event Name input field using the CSS selector 'input#event-name'.",
+            "Type 'Sample Event' into the Event Name input field.",
+            "Find the Event Type dropdown using the CSS selector 'select#event-type'.",
+            "Select 'Conference' from the Event Type dropdown.",
+            "Find the Tagline input field using the CSS selector 'input#tagline'.",
+            "Type 'Sample Tagline' into the Tagline input field.",
+            "Find the Email input field using the CSS selector 'input#email'.",
+            "Type 'sample@example.com' into the Email input field.",
+            "Find the Phone Number input field using the CSS selector 'input#phone-number'.",
+            "Type '1234567890' into the Phone Number input field.",
+            "Find the Start Date & Time input field using the CSS selector 'input#start-date-time'.",
+            "Type '2023-10-10T10:00' into the Start Date & Time input field.",
+            "Find the Organizer input field using the CSS selector 'input#organizer'.",
+            "Type 'Sample Organizer' into the Organizer input field.",
+            "Find the Image Url input field using the CSS selector 'input#image-folder-path'.",
+            "Type 'path/to/image' into the Image Url input field.",
+            "Find the Ticket Price input field using the CSS selector 'input#ticket-price'.",
+            "Type '50' into the Ticket Price input field.",
+            "Find the Address Line 1 input field using the CSS selector 'input#address1'.",
+            "Type '123 Main St' into the Address Line 1 input field.",
+            "Find the City input field using the CSS selector 'input#city'.",
+            "Type 'Sample City' into the City input field.",
+            "Find the State input field using the CSS selector 'input#state'.",
+            "Type 'Sample State' into the State input field.",
+            "Find the Zip Code input field using the CSS selector 'input#zip-code'.",
+            "Type '12345' into the Zip Code input field.",
+            "Find the Country input field using the CSS selector 'input#country'.",
+            "Type 'Sample Country' into the Country input field.",
+            "Find the Latitude input field using the CSS selector 'input#lat'.",
+            "Type '12.3456' into the Latitude input field.",
+            "Find the Longitude input field using the CSS selector 'input#long'.",
+            "Type '65.4321' into the Longitude input field.",
+            "Click the 'Create Event' button using the CSS selector 'button:contains(\"Create Event\")'.",
+            "Verify that the event is created and listed in the events list."
+        ]
+    }
+]

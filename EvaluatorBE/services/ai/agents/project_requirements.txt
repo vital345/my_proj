@@ -1,0 +1,257 @@
+Milestone 1: Signup Screen and Login Screen
+Login Screen
+1.
+User must have an option to log in to the application making use of their email IDs or password they have set up while registering to the application.
+2.
+Upon successful login users must be re-directed to the Products listing page.
+3.
+On successful login, token will be returned by the APIs that need to be stored in local storage.
+4.
+Email ID must have validation that it must be a proper email containing @xyz.com / @xyz.in.
+5.
+Spinner should be shown for each loading state from the API even for GET or POST calls.
+6.
+Upon clicking on the eye icon user show/hide password feature must work.
+Signup Screen
+1.
+Allows new users to register using email, password, and username (Step1)
+2.
+In Step2 provide Address and user details
+3.
+Validate the step1 , then navigate to step2. once all fields are filled, then SignUp.
+4.
+To register to the app, the user must provide a few details as mentioned below
+5.
+User Name
+6.
+Email id
+7.
+Password
+8.
+Phone number
+9.
+Address
+10.
+User details (first name and last name)
+11.
+All above-mentioned fields are mandatory/required for a successful registration.
+12.
+After successful sign-up user must be navigated to the login screen.
+13.
+Email ID must have validation that it must be a proper email containing @xyz.com / @xyz.in.
+14.
+Phone number must have validation that it must be of 10 digits.
+15.
+Only once all the fields are filled signup button must be enables, till then it will be disabled.
+Stretch Goals:
+•
+UI must be responsive to handle different screen sizes.
+API details with sample request and response:
+Sign Up API:
+Sign Up API:
+URL:- https://fakestoreapi.com/users
+POST API
+Headers:- None
+Body:-
+{
+email:'John@gmail.com',
+username:'johnd',
+password:'m38rmF$',
+name:{
+firstname:'John',
+lastname:'Doe'
+},
+address:{
+city:'kilcoole',
+street:'7835 new road',
+number:3,
+zipcode:'12926-3874',
+geolocation:{
+lat:'-37.3159',
+long:'81.1496'
+}
+},
+phone:'1-570-236-7033'
+}
+Response:-
+Status:- 200
+{
+"id": 1
+}
+Login API:
+URL :- https://fakestoreapi.com/auth/login
+POST
+Headers: None
+Body:-
+{
+"username": "johnd",
+"password": "m38rmF$"
+}
+Response:-
+{
+"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXIiOiJqb2huZCIsImlhdCI6MTcxODYwODc5Nn0.zRwuomtbw-QHMM9_nCsXViNXnSAbJjz9xgiS6yDM8yY"
+}
+Milestone 2: Events listing page
+1.
+After successful login the user must land on the All events page (Dashboard Page).
+2.
+All events pages must contain the list of All events as shown in design.
+3.
+Dashboard Page will have 3 Tabs like filter buttons.
+4.
+All (Should display all the events)
+5.
+Festival (Should display the events of festival category)
+6.
+Conference (Should display only the events of conference category)
+7.
+Playground (Should display only the events of playground category)
+8.
+On click of tickets & details button user should be navigated to event details screen of that event.
+9.
+Dashboard page should also have search bar, Sort, and grid/list toggle buttons.
+Stretch Goal
+•
+Show only 12 events on load and then implement infinite scroll feature to load events as and when you scroll.
+Milestone 3: Event detail page
+1.
+On clicking an event, the user should land on this page with event-specific details.
+2.
+On clicking "Register," the user should be registered for the event, and a confirmation message should be displayed to the user as a toast message, such as "Successfully registered."
+3.
+Once registered, the "Register" button should display as "Registered" with no click event trigger on it.
+4.
+On clicking "Watch Video," it should redirect to a video link in a new tab.
+5.
+Event details sections like "When and Where" and "Organisers" tabs are expandable and collapsible on clicking their headers.
+6.
+At the end of the event details page, in the "You May Like" section, a list of up to 3 events should be visible, with the remaining events visible in a horizontal scroll.
+7.
+Display the event location on Google Maps.
+Milestone 4: Event creation
+1.
+Create an Create Event page. On Click of Create Event from the Top bar, user should be able to navigate to Create Event Page.
+2.
+Should Validate all the required fields, once all the required fields are entered create button should be enabled, and new event should be created.
+3.
+Event name
+4.
+event type - drop down, values are Festival, Conference and Playground
+5.
+tagline
+6.
+email
+7.
+phone number
+8.
+start date & time
+9.
+end date & time
+10.
+organiser
+11.
+organiser details - optional
+12.
+speaker
+13.
+video url - optional
+14.
+image folder path
+15.
+ticket price - optional
+16.
+speaker description
+17.
+description
+18.
+address1
+19.
+address2 - optional
+20.
+city
+21.
+state
+22.
+zip code
+23.
+country
+24.
+lat
+25.
+long
+26.
+When any validations are wrong show the respective error and warning messages, with relevant information.
+Note:
+•
+Designs are just for reference purpose, page design should match app theme
+•
+Image path field - relative path to the folder which contains one or more images. separate folder for each event
+•
+The event type field is not present in the design, but you should add it.
+Stretch goals:
+•
+Add validations for date time fields, end date time always greater than start date time
+•
+Use rich editor for event description field
+Milestone 5: Events overview
+1.
+Display events count as per design
+2.
+Upcoming
+3.
+completed
+4.
+total
+5.
+my events
+6.
+Integrate bar chart using any open source library (MUI or react-charts)
+7.
+Integrate grid and display following columns as per design
+•
+ID or Sl No
+•
+Event title
+•
+description
+•
+date (Start date)
+•
+location (Address)
+•
+organiser
+•
+type of event
+•
+status - upcoming/completed
+1.
+Update the grid based on the bar graph selection. For example, when the user clicks on the November bar, the grid
+should filter and display events where the start date is in
+November.
+2.
+Implement additional filters
+3.
+Search bar - display rows which contains/matches user input from columns event name, description, location
+4.
+type dropdown
+5.
+All - Display all rows
+6.
+Festival - show only festival type events
+7.
+Conference - show only conference type events
+8.
+Playground - show only playground type events
+Stretch goals:
+•
+Implement chart export functionality
+•
+Implement data grid export feature (Based on current selection), CSV format
+•
+Implement grid pagination, display max 10 rows at a time
+Media:
+Media1: Event listing page
+Media 2: Event details page
+Media 3: Create Events Page
+Media 4: Analytics Page
+Media 5 : Login & SignUp Page

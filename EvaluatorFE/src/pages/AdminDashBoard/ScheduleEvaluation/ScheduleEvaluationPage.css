@@ -1,0 +1,34 @@
+.schedule--header {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+    font-weight: 700;
+}
+
+.schedule--navbar {
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule--nav-items {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0;
+}
+
+.schedule--nav-item a{
+    color: #1c252e;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+.schedule--nav-item a:hover {
+    text-decoration: underline;
+}
+
+.active {
+    color: #919eab;
+}

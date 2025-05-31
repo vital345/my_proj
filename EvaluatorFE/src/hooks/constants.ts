@@ -1,0 +1,1 @@
+export const PING_SERVER_INTERVAL = 3000;

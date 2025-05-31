@@ -1,0 +1,283 @@
+{
+    "endpoints": [
+        {
+            "endpoint_description": "User registration endpoint for creating a new user account.",
+            "endpoint_url": "/api/user/register",
+            "endpoint_method": "POST",
+            "is_authentication_required": false,
+            "way_of_authetication": null,
+            "is_implemented": true,
+            "request_body_example": "{\n  \"fullName\": \"John Doe_x7Yz\",\n  \"email\": \"john_9fTq3.doe@example.com\",\n  \"password\": \"A1b!2C3d@4E5\",\n  \"dob\": \"1965-01-01\",\n  \"role\": \"USER\"\n}"
+        },
+        {
+            "endpoint_description": "User login endpoint to authenticate and receive a JWT token.",
+            "endpoint_url": "/api/user/login",
+            "endpoint_method": "POST",
+            "is_authentication_required": false,
+            "way_of_authetication": null,
+            "is_implemented": true,
+            "request_body_example": "{\n  \"email\": \"john_9fTq3.doe@example.com\",\n  \"password\": \"A1b!2C3d@4E5\"\n}"
+        },
+        {
+            "endpoint_description": "Admin registration endpoint for creating a new admin account. Only accessible by existing admins.",
+            "endpoint_url": "/api/admin/register",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"fullName\": \"Admin User_q9Wz\",\n  \"email\": \"admin_8jKfR@socio.com\",\n  \"password\": \"F6g!7H8i@9J0\",\n  \"dob\": \"1975-01-01\",\n  \"role\": \"ADMIN\"\n}"
+        },
+        {
+            "endpoint_description": "User login endpoint to authenticate and receive a JWT token.",
+            "endpoint_url": "/api/user/login",
+            "endpoint_method": "POST",
+            "is_authentication_required": false,
+            "way_of_authetication": null,
+            "is_implemented": true,
+            "request_body_example": "{\n  \"email\": \"admin_8jKfR@socio.com\",\n  \"password\": \"F6g!7H8i@9J0\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to create a new post with text and/or media.",
+            "endpoint_url": "/api/posts/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"user\": { \"userId\": 1 },\n  \"content\": \"This is a new post_1a2b3c4d\",\n  \"mediaURL\": \"http://example.com/image.jpg\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to get visible posts for a user based on privacy settings and relationships.",
+            "endpoint_url": "/api/posts/id/{targetUserId}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint to update a post by the user who created it.",
+            "endpoint_url": "/api/posts/update/{postId}",
+            "endpoint_method": "PUT",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"userId\": 1,\n  \"content\": \"Updated post content_5d6e7f8g\",\n  \"mediaURL\": \"http://example.com/new-image.jpg\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to delete a post by the user who created it.",
+            "endpoint_url": "/api/posts/delete/{postId}",
+            "endpoint_method": "DELETE",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint to share a post, creating a new post linking to the original post.",
+            "endpoint_url": "/api/posts/share",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"originalPostId\": 1,\n  \"requesterUserId\": 2\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to follow another user.",
+            "endpoint_url": "/api/follow/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"followerId\": 1,\n  \"followedId\": 2\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to get all followers of a user.",
+            "endpoint_url": "/api/follow/all/{userId}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint to get all users a user is following.",
+            "endpoint_url": "/api/follow/following/{userId}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint to create a new group.",
+            "endpoint_url": "/api/groups/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"creatorId\": 1,\n  \"group\": {\n    \"name\": \"New Group_9h0i1j2k\",\n    \"description\": \"This is a new group_3l4m5n6o\",\n    \"isPrivate\": false\n  }\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to toggle the privacy of a group. Only the creator can do this.",
+            "endpoint_url": "/api/groups/{groupId}/togglePrivacy",
+            "endpoint_method": "PUT",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"userId\": 1,\n  \"isPrivate\": true\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to add a member to a group. Only the creator can add members.",
+            "endpoint_url": "/api/groups/{groupId}/members",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"creatorId\": 1,\n  \"memberId\": 2\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to remove a member from a group. Only the creator can remove members.",
+            "endpoint_url": "/api/groups/{groupId}/members/{memberId}",
+            "endpoint_method": "DELETE",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"creatorId\": 1\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to get details of a specific group, including its members and creator.",
+            "endpoint_url": "/api/groups/{groupId}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint to get all groups a user is part of, either as a creator or member.",
+            "endpoint_url": "/api/groups/my",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"userId\": 1\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to add an interaction (like, comment) to a post.",
+            "endpoint_url": "/api/interactions/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"post\": { \"postId\": 1 },\n  \"user\": { \"userId\": 1 },\n  \"type\": \"LIKE\",\n  \"commentText\": \"Nice post!_7p8q9r0s\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint to retrieve all interactions for a given post.",
+            "endpoint_url": "/api/interactions/get/{postId}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to review reported posts and decide to keep or delete them.",
+            "endpoint_url": "/api/admin/report-review/{reportId}",
+            "endpoint_method": "PUT",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"deletePost\": true\n}"
+        },
+        {
+            "endpoint_description": "Endpoint for admins to add a new admin.",
+            "endpoint_url": "/api/admin/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"userId\": 1,\n  \"user\": {\n    \"fullName\": \"New Admin_3t4u\",\n    \"email\": \"newadmin_4v5w6@socio.com\",\n    \"password\": \"K1l!2M3n@4O5\",\n    \"dob\": \"1980-01-01\",\n    \"role\": \"ADMIN\"\n  }\n}"
+        },
+        {
+            "endpoint_description": "Endpoint for admins to delete a user.",
+            "endpoint_url": "/api/admin/delete/{id}",
+            "endpoint_method": "DELETE",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to bulk import users via a CSV file.",
+            "endpoint_url": "/api/admin/bulk-import",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"file\": \"path/to/file.csv\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint for admins to get all users.",
+            "endpoint_url": "/api/admin/all",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to get a specific user by ID.",
+            "endpoint_url": "/api/admin/{id}",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to get all reports.",
+            "endpoint_url": "/api/admin/reports/get",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to create a report for a post.",
+            "endpoint_url": "/api/admin/reports/add",
+            "endpoint_method": "POST",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": "{\n  \"post\": { \"postId\": 1 },\n  \"reportedBy\": { \"userId\": 1 },\n  \"justification\": \"Inappropriate content_1x2y3z4a\"\n}"
+        },
+        {
+            "endpoint_description": "Endpoint for admins to export user statistics as CSV.",
+            "endpoint_url": "/api/admin/statistics/users/csv",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to export post statistics as CSV.",
+            "endpoint_url": "/api/admin/statistics/posts/csv",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        },
+        {
+            "endpoint_description": "Endpoint for admins to export reported post statistics as CSV.",
+            "endpoint_url": "/api/admin/statistics/reports/csv",
+            "endpoint_method": "GET",
+            "is_authentication_required": true,
+            "way_of_authetication": "Authorization: Bearer <TOKEN>",
+            "is_implemented": true,
+            "request_body_example": null
+        }
+    ]
+}
